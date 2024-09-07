@@ -15,6 +15,19 @@ import config from './config.json';
 
 function App() {
 
+const loadBlockchainData= async ()=>{
+  // Connecting Frontend with Blockchain network (Metamask)
+  const provider =new ethers.providers.Web3Provider(window.ethereum);
+  const accounts= await window.ethereum.request({method:'eth_requestAccounts'});
+  console.log(accounts);
+}
+
+useEffect(()=>{
+  loadBlockchainData()
+},[])
+
+
+
   return (
     <div>
 
