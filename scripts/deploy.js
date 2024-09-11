@@ -21,7 +21,7 @@ async function main() {
    const RealEstate =await ethers.getContractFactory('RealEstate');
    const realEstate=await RealEstate.deploy()
    await realEstate.deployed()
-
+   
    console.log(`Deployed Real Estate Contract at: ${realEstate.address}`)
    console.log(`Minting 3 properties...\n`)
 
